@@ -1,5 +1,5 @@
 {
-  "name": "git-test",
+  "name": "confusion",
   "version": "1.0.0",
   "description": "This is a website for Ristorante Con Fusion",
   "main": "index.html",
@@ -10,18 +10,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vicc30/git-test.git"
+    "url": "git+https://github.com/vicc30/conFusion"
   },
   "author": "Victor Cruz",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/vicc30/git-test/issues"
+    "url": "https://github.com/vicc30/conFusion/issues"
   },
-  "homepage": "https://github.com/vicc30/git-test#readme",
+  "homepage": "https://github.com/vicc30/conFusion#readme",
   "devDependencies": {
-    "lite-server": "^2.5.4"
-  },
-  "dependencies": {
+    "lite-server": "^2.5.4",
     "minimist": "^1.2.5"
   }
 }
