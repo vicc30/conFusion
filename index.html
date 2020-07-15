@@ -17,8 +17,6 @@
     </head>
 
     <body>
-
-
             <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
                 <div class="container">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
@@ -93,7 +91,7 @@
                         </div>
                         <div class="d-flex col-12 col-sm-3 align-self-center mt-4">
                             <span class="navbar-text">
-                                <a class="btn btn-primary" data-toggle="modal" data-target="#reservationModal" 
+                                <a class="btn btn-light" data-toggle="modal" data-target="#reservationModal" 
                                 role="button">Reserve table</a>
                             </span>
                         </div>
@@ -146,7 +144,14 @@
                             <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
                                 <span class="carousel-control-next-icon"></span>
                             </a>
-                        
+                            <div class="btn-group" id="carouselButton">
+                                <button class="btn btn-danger btn-sm" id="carousel-pause">
+                                    <span class="fa fa-pause"></span>
+                                </button>
+                                <button class="btn btn-danger btn-sm" id="carousel-play">
+                                    <span class="fa fa-play"></span>
+                                </button>
+                            </div>
                         </div>
                     </div>
 
@@ -326,6 +331,17 @@
     <script src="node_modules/tether/dist/js/tether.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#myCarousel").carousel( { interval: 2000 } );
+            $("#carousel-pause").click(function(){
+                $("#myCarousel").carousel('pause');
+            });
+            $("#carousel-play").click(function(){
+                $("#myCarousel").carousel('cycle');
+            });
+        });
+    </script>
  <!--   <script>
         $(document).ready(function(){
         $('[data-toggle="tooltip"]').tooltip();
