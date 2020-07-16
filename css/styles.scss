@@ -1,7 +1,7 @@
 $lt-gray: #ddd;
 $background-dark: #800000;
 $background-light: #f1bf20;
-$background-pale: #D1C4E9;
+$background-pale: #faf9b9;
 
 //Height variables 
 $carousel-item-height: 300px;
@@ -24,13 +24,14 @@ $carousel-item-height: 300px;
 
 .footer{
     background-color: $background-pale;
+    color: $background-dark;
     @include zero-margin(20px, 0px);
 }
 
 .jumbotron {
     @include zero-margin(70px,30px);
     background: $background-light ;
-    color:floralwhite;
+    color: $background-dark;
 }
 
 address{
@@ -73,5 +74,18 @@ body{
     right:0px;
     position: absolute;
     bottom: 0px;
-    z-index: 1;
+    z-index: 1500;
+}
+
+.modal-header {
+    background-color: $background-dark;
+    color: floralwhite;
+
+    .close {
+        color: floralwhite;
+    }
+}
+
+.modal-body {
+    background-color: $background-pale;
 }

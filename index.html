@@ -31,7 +31,7 @@
                             <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                         </ul>
                         <span class="navbar-text">
-                            <a data-toggle="modal" data-target="#loginModal" role="button">
+                            <a role="button" id="loginButton"> <!--data-toggle="modal" data-target="#loginModal"-->
                                 <span class="fa fa-sign-in"></span> Login
                             </a>
                         </span>
@@ -45,7 +45,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <h4 class="modal-title">Login</h4>
-                            <button  type="button" class="close" data-dismiss="modal">
+                            <button  type="button" class="close" id="closeLogin"> <!--data-dismiss="modal"-->
                                 &times;
                             </button>
                         </div>
@@ -70,7 +70,7 @@
                                     </div>
                                 </div>
                                 <div class="form-row">
-                                    <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                                    <button type="button" class="btn btn-secondary btn-sm ml-auto" id="cancelLogin">Cancel</button> <!-- data-dismiss="modal"-->
                                     <button type="button" class="btn btn-primary btn-sm ml-1">Sign in</button>
                                 </div>
                             </form>
@@ -91,8 +91,8 @@
                         </div>
                         <div class="d-flex col-12 col-sm-3 align-self-center mt-4">
                             <span class="navbar-text">
-                                <a class="btn btn-light" data-toggle="modal" data-target="#reservationModal" 
-                                role="button">Reserve table</a>
+                                <a class="btn btn-light" role="button" id="reserveButton">Reserve table</a>
+                                <!--data-target="#reservationModal"  data-toggle="modal"-->
                             </span>
                         </div>
 
@@ -211,7 +211,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <h3 class="modal-title">Reserve Table</h3>
-                            <button  type="button" class="close" data-dismiss="modal">
+                            <button  type="button" class="close" id="reserveClose"> <!--data-dismiss="modal"--> 
                                 &times;
                             </button>
                         </div>
@@ -249,7 +249,7 @@
                                 </div>
                                 <div class="form-group row">
                                     <label for="group" class="col-md-4 col-form-label">Section</label>
-                                    <div class="btn-group" role="group" data-toggle="buttons">
+                                    <div class="btn-group" role="group"> <!-- data-toggle="buttons"-->
                                         <button type="button" class="btn btn-success active">Non-smoking</button>
                                         <button type="button" class="btn btn-danger">Smoking</button>
                                     </div>
@@ -267,7 +267,7 @@
                                 </div>
                                 <div class="form-group row">
                                     <div class="offset-md-2 col-md-10">
-                                        <button type="button" class="btn btn-secondary ml-auto" data-dismiss="modal">Cancel</button>
+                                        <button type="button" class="btn btn-secondary ml-auto" id="reserveCancel">Cancel</button><!-- data-dismiss="modal"-->
                                         <button type="submit" class="btn btn-primary ml-1">Reserve</button>
                                     </div>
                                 </div>
@@ -341,7 +341,35 @@
                     $('#carouselButton').children('span').addClass('fa-pause');
                 }
             });
+        //This is for login
+            //shows up login when clicked
+            $('#loginButton').click(function(){
+                $('#loginModal').modal("show");
+            });
+            //button for cancel login
+            $('#cancelLogin').click(function(){
+                $('#loginModal').modal("hide");
+            });
+            //button for close
+            $('#closeLogin').click(function(){
+                $('#loginModal').modal("hide");
+            });
+        // This is for reservation
+            //shows reserve modal clicking on reservation
+            $('#reserveButton').click(function(){
+                $('#reservationModal').modal("show");
+            });
+            //button for cancel
+            $('#reserveCancel').click(function(){
+                $('#reservationModal').modal("hide");
+            });
+            //button for close
+            $('#reserveClose').click(function(){
+                $('#reservationModal').modal("hide");
+            });
         });
+
+        
     </script>
  <!--   <script>
         $(document).ready(function(){
