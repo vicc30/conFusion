@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/vicc30/conFusion#readme",
   "devDependencies": {
-    "browser-sync": "^2.26.10",
+    "browser-sync": "^2.26.12",
     "cssmin": "^0.4.3",
     "del": "^3.0.0",
     "grunt": "^1.2.1",

@@ -51,9 +51,7 @@ gulp.task('usemin', function () {
        .pipe(gulp.dest('dist/'));
 });
 
-gulp.task('build', gulp.series('clean',
-    gulp.parallel('copyfonts', 'imagemin', 'usemin')
-));
+gulp.task('build', gulp.series('clean', gulp.parallel('copyfonts','imagemin','usemin')));
 
 gulp.task('watch', function () {
     gulp.watch('./css/*.scss', gulp.series('sass'));

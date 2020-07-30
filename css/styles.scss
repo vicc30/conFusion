@@ -25,7 +25,7 @@ $carousel-item-height: 300px;
 .footer{
     background-color: $background-pale;
     color: $background-dark;
-    @include zero-margin(20px, 0px);
+    @include zero-margin(30px, 0px);
 }
 
 .jumbotron {
